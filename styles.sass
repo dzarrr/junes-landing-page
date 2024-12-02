@@ -1,21 +1,27 @@
+// DEVICE BREAKPOINTS
 $mobile: 480px
 $tablet: 720px
 $desktopS: 960px
 $desktop: 1240px
 $desktopHD: 1920px
 
+// COLOR
+$brownSugar: #C77E63
+$brownRust: #AC5836
+$pinkChampagne: #FFE9DD
+
 body
     margin: 0
     font-family: "Nunito Sans", sans-serif
 
 #header
-    background-color: #FFE9DD
+    background-color: $pinkChampagne
     position: sticky
     top: 0
     text-align: center
     img
         margin-top: -2.5em
-        margin-bottom: -2.5em
+        margin-bottom: -3em
         width: 15em
 
 #body
@@ -23,7 +29,6 @@ body
     background-color: white
 
 .topnav
-    height: 1.5em
     display: flex
     justify-content: space-around
 
@@ -32,7 +37,48 @@ body
         justify-content: space-between
         gap: 2em
 
+        @media (max-width: $desktopS)
+            display: none
+
+    &__link-container--mobile
+        display: flex
+        justify-content: space-between
+        padding: 1em
+        width: 100%
+
         a
             text-decoration: none
+            color: $brownSugar
+            width: 50%
             &:hover
                 cursor: pointer
+                text-decoration: underline
+                color: $brownRust
+
+        @media (min-width: $desktopS)
+            display: none
+
+.topnav__link-anchor
+    padding: .6em 1em
+    text-decoration: none
+    color: $brownSugar
+
+    // TODO: still have some issue that needs to be fixed here:
+    // the span icon also has underline below it
+    &:hover
+        cursor: pointer
+        text-decoration: underline
+        color: $brownRust
+
+        span
+            text-decoration: none !important
+
+    &--emphasis
+        background-color: $brownSugar
+        color: $pinkChampagne
+        display: flex
+        align-items: center
+        gap: .5em
+
+        &:hover
+            color: $pinkChampagne
