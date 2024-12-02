@@ -19,4 +19,21 @@ body {
   background-color: white;
 }
 
+.topnav {
+  height: 1.5em;
+  display: flex;
+  justify-content: space-around;
+}
+.topnav__link-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+}
+.topnav__link-container a {
+  text-decoration: none;
+}
+.topnav__link-container a:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */
