@@ -3,16 +3,18 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link href="styles.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div>
-        Every day's great at your junes!
-    </div>
+    <div id="header"></div>
+    <div id="body"></div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
+        $("#header").load("../component/header.html")
+        $("#body").load("../component/body.html")
     </script>
 </body>
 
