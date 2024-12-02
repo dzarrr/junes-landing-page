@@ -40,24 +40,6 @@ body
         @media (max-width: $desktopS)
             display: none
 
-    &__link-container--mobile
-        display: flex
-        justify-content: space-between
-        padding: 1em
-        width: 100%
-
-        a
-            text-decoration: none
-            color: $brownSugar
-            width: 50%
-            &:hover
-                cursor: pointer
-                text-decoration: underline
-                color: $brownRust
-
-        @media (min-width: $desktopS)
-            display: none
-
 .topnav__link-anchor
     padding: .6em 1em
     text-decoration: none
@@ -82,3 +64,30 @@ body
 
         &:hover
             color: $pinkChampagne
+
+.topnav__link-container--mobile
+    display: flex
+    justify-content: space-between
+    padding: 1em
+    width: 100%
+
+    a
+        text-decoration: none
+        color: $brownSugar
+        width: 50%
+        &:hover
+            cursor: pointer
+            text-decoration: underline
+            color: $brownRust
+
+    .topnav__link-menu
+        width: 50%
+        font-family: inherit
+        text-align: left
+        color: $brownRust
+        display: flex
+        align-items: center
+        gap: 1em
+
+    @media (min-width: $desktopS)
+        display: none
