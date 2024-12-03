@@ -1,3 +1,14 @@
+@keyframes grow-text {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.05, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 body {
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
@@ -54,6 +65,9 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5em;
+}
+.topnav__link-anchor--emphasis b, .topnav__link-anchor--emphasis span {
+  animation: grow-text 2s linear infinite;
 }
 .topnav__link-anchor--emphasis:hover {
   color: #FFE9DD;
@@ -112,14 +126,18 @@ body {
 .sidenav__link {
   list-style-type: none;
   text-align: left;
+  border-bottom: 1px solid rgba(172, 88, 54, 0.3);
 }
 .sidenav__link a {
-  color: #AC5836;
   text-decoration: none;
+  color: #AC5836;
   display: block;
   width: 100%;
 }
 .sidenav__link--emphasis {
+  color: #AC5836;
+  transform-origin: left;
+  animation: grow-text 2s linear infinite;
   display: flex;
   align-items: center;
 }
@@ -129,6 +147,7 @@ body {
   flex-direction: column;
   color: #C77E63;
   gap: 1.5em;
+  padding-right: 2em;
 }
 
 .sidenav__top {
