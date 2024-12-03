@@ -15,15 +15,17 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header id="header"></header>
     <div id="body"></div>
     <div id="sidebar"></div>
+    <footer id="footer"></footer>
     <div class="overlay hidden"></div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
         $("#header").load("../component/header.html")
         $("#body").load("../component/body.html")
         $("#sidebar").load("../component/sidebar.html")
+        $('#footer').load("../component/footer.html")
     </script>
 </body>
 </html>

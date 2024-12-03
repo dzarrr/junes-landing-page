@@ -181,4 +181,42 @@ body {
   visibility: hidden;
 }
 
+#footer {
+  display: flex;
+  width: 100vw;
+  height: 7.5em;
+}
+@media (max-width: 960px) {
+  #footer {
+    flex-direction: column;
+  }
+}
+
+.footer__left-section {
+  background-color: #FFE9DD;
+}
+@media (max-width: 960px) {
+  .footer__left-section {
+    height: 60%;
+  }
+}
+@media (min-width: 960px) {
+  .footer__left-section {
+    width: 60%;
+  }
+}
+.footer__right-section {
+  background-color: #E6BCA4;
+}
+@media (max-width: 960px) {
+  .footer__right-section {
+    height: 40%;
+  }
+}
+@media (min-width: 960px) {
+  .footer__right-section {
+    width: 40%;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

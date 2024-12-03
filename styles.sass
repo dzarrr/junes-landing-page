@@ -9,6 +9,7 @@ $desktopHD: 1920px
 $brownSugar: #C77E63
 $brownRust: #AC5836
 $pinkChampagne: #FFE9DD
+$desertSand: #E6BCA4
 
 // UTILS
 $zIndexHigherThanOverlay: 1001
@@ -176,3 +177,25 @@ body
         opacity: 0
         transition: visibility 1.5s cubic-bezier(.36,-0.01,0,.77), opacity 1.5s cubic-bezier(.36,-0.01,0,.77)
         visibility: hidden
+
+#footer
+    display: flex
+    width: 100vw
+    height: 7.5em
+    @media (max-width: $desktopS)
+        flex-direction: column
+
+.footer
+    &__left-section
+        background-color: $pinkChampagne
+        @media (max-width: $desktopS)
+            height: 60%
+        @media (min-width: $desktopS)
+            width: 60%
+
+    &__right-section
+        background-color: $desertSand
+        @media (max-width: $desktopS)
+            height: 40%
+        @media (min-width: $desktopS)
+            width: 40%
