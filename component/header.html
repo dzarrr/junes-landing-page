@@ -1,75 +1,29 @@
 <header>
-    <div>
-        <img src="../assets/img/junes_logo.png" alt="Junes Logo">
-    </div>
-    <div class="topnav">
-        <div class="topnav__link-container">
-            <a class="topnav__link-anchor" href="#about">About Us</a>
-            <a class="topnav__link-anchor" href="#about">Product</a>
-            <a class="topnav__link-anchor" href="#about">Promo & Event</a>
-            <a class="topnav__link-anchor" href="#about">Membership</a>
-            <a class="topnav__link-anchor topnav__link-anchor--emphasis" href="#about">
-                <b>Shop Now</b>
-                <span class="material-symbols-outlined">
-                    shopping_bag
-                </span>
-            </a>
+    <div class="nav">
+        <div>
+            <img src="../assets/img/junes_logo.png" alt="Junes Logo">
         </div>
-        <div class="topnav__link-container--mobile">
-            <div class="topnav__link-menu">
-                <span class="material-symbols-outlined">
-                    menu
-                </span>
-            </div>
-            <a href="#about"><b>Shop Now</b></a>
-        </div>
-    </div>
-    <!-- TODO: if I implement it this way, outer div we won't be able to scroll the main content -->
-    <!-- any other way to do this? -->
-    <div class="sidenav">
-        <div class="sidenav__content">
-            <div class="sidenav__top">
-                <div class="sidenav__close-button">
-                    <span class="material-symbols-outlined">
-                        close
-                    </span>
-                </div>
-            </div>
-            <ul class="sidenav__link-container">
-                <li class="sidenav__link">
-                    <a href="#about">About Us</a>
-                </li>
-                <li class="sidenav__link">
-                    <a href="#about">Product</a>
-                </li>
-                <li class="sidenav__link">
-                    <a href="#about">Promo & Event</a>
-                </li>
-                <li class="sidenav__link">
-                    <a href="#about">Membership</a>
-                </li>
-                <li class="sidenav__link--emphasis">
+        <div class="topnav">
+            <div class="topnav__link-container">
+                <a class="topnav__link-anchor" href="#about">About Us</a>
+                <a class="topnav__link-anchor" href="#about">Product</a>
+                <a class="topnav__link-anchor" href="#about">Promo & Event</a>
+                <a class="topnav__link-anchor" href="#about">Membership</a>
+                <a class="topnav__link-anchor topnav__link-anchor--emphasis" href="#about">
                     <b>Shop Now</b>
                     <span class="material-symbols-outlined">
                         shopping_bag
                     </span>
-                </li>
-            </ul>
+                </a>
+            </div>
+            <div class="topnav__link-container--mobile">
+                <div class="topnav__link-menu">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+                <a href="#about"><b>Shop Now</b></a>
+            </div>
         </div>
-        <div class="sidenav__overlay"></div>
     </div>
 </header>
-<script>
-    $(".topnav__link-menu").on("click", () => {
-        $(".sidenav").css("display", "flex")
-    })
-
-    $(".sidenav__overlay").on("click", () => {
-        $(".sidenav").css("display", "none")
-    })
-
-    $(".sidenav__close-button").on("click", () => {
-        $(".sidenav").css("display", "none")
-    })
-
-</script>

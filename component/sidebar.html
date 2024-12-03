@@ -1,0 +1,50 @@
+<!-- TODO: if I implement it this way, outer div we won't be able to scroll the main content -->
+<!-- any other way to do this? -->
+<div class="sidenav hidden">
+    <div class="sidenav__content">
+        <div class="sidenav__top">
+            <div class="sidenav__close-button">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+        </div>
+        <ul class="sidenav__link-container">
+            <li class="sidenav__link">
+                <a href="#about">About Us</a>
+            </li>
+            <li class="sidenav__link">
+                <a href="#about">Product</a>
+            </li>
+            <li class="sidenav__link">
+                <a href="#about">Promo & Event</a>
+            </li>
+            <li class="sidenav__link">
+                <a href="#about">Membership</a>
+            </li>
+            <li class="sidenav__link--emphasis">
+                <b>Shop Now</b>
+                <span class="material-symbols-outlined">
+                    shopping_bag
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script>
+    $(".topnav__link-menu").on("click", () => {
+        // $(".sidenav").css("display", "flex")
+        $(".sidenav").removeClass("hidden")
+        $(".overlay").removeClass("hidden")
+    })
+
+    $(".overlay").on("click", () => {
+        $(".sidenav").addClass("hidden")
+        $(".overlay").addClass("hidden")
+    })
+
+    $(".sidenav__close-button").on("click", () => {
+        $(".sidenav").addClass("hidden")
+        $(".overlay").addClass("hidden")
+    })
+</script>

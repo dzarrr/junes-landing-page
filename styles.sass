@@ -10,6 +10,9 @@ $brownSugar: #C77E63
 $brownRust: #AC5836
 $pinkChampagne: #FFE9DD
 
+// UTILS
+$zIndexHigherThanOverlay: 1001
+
 body
     margin: 0
     font-family: "Nunito Sans", sans-serif
@@ -94,21 +97,21 @@ body
 
 .sidenav
     width: 100vw
-    display: none
+    transition: 1.5s cubic-bezier(.36,-0.01,0,.77)
+    display: flex
     height: 100vh
-    position: absolute
+    position: fixed
     top: 0
     color: $brownSugar
+    z-index: $zIndexHigherThanOverlay
 
     &__content
         width: 80%
         height: inherit
         background-color: $pinkChampagne
 
-    &__overlay
-        width: 20%
-        height: inherit
-        background: rgba(0, 0, 0, 0.5)
+    &.hidden
+        margin-left: -100vw
 
 .sidenav__link
     list-style-type: none
@@ -137,3 +140,20 @@ body
     width: 3em
     span
         font-size: 36px
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 1000
+    visibility: visible
+    opacity: 1
+    transition: visibility 1.5s cubic-bezier(.36,-0.01,0,.77), opacity 1.5s cubic-bezier(.36,-0.01,0,.77)
+
+    &.hidden
+        opacity: 0
+        transition: visibility 1.5s cubic-bezier(.36,-0.01,0,.77), opacity 1.5s cubic-bezier(.36,-0.01,0,.77)
+        visibility: hidden
