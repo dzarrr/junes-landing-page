@@ -90,4 +90,58 @@ body {
   }
 }
 
+.sidenav {
+  width: 100vw;
+  display: none;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  color: #C77E63;
+}
+.sidenav__content {
+  width: 80%;
+  height: inherit;
+  background-color: #FFE9DD;
+}
+.sidenav__overlay {
+  width: 20%;
+  height: inherit;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sidenav__link {
+  list-style-type: none;
+  text-align: left;
+}
+.sidenav__link a {
+  color: #AC5836;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+.sidenav__link--emphasis {
+  display: flex;
+  align-items: center;
+}
+
+.sidenav__link-container {
+  display: flex;
+  flex-direction: column;
+  color: #C77E63;
+  gap: 1.5em;
+}
+
+.sidenav__top {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75em;
+}
+
+.sidenav__close-button {
+  width: 3em;
+}
+.sidenav__close-button span {
+  font-size: 36px;
+}
+
 /*# sourceMappingURL=styles.css.map */

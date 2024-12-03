@@ -91,3 +91,49 @@ body
 
     @media (min-width: $desktopS)
         display: none
+
+.sidenav
+    width: 100vw
+    display: none
+    height: 100vh
+    position: absolute
+    top: 0
+    color: $brownSugar
+
+    &__content
+        width: 80%
+        height: inherit
+        background-color: $pinkChampagne
+
+    &__overlay
+        width: 20%
+        height: inherit
+        background: rgba(0, 0, 0, 0.5)
+
+.sidenav__link
+    list-style-type: none
+    text-align: left
+    a
+        color: $brownRust
+        text-decoration: none
+        display: block
+        width: 100%
+    &--emphasis
+        display: flex
+        align-items: center
+
+.sidenav__link-container
+    display: flex
+    flex-direction: column
+    color: $brownSugar
+    gap: 1.5em
+
+.sidenav__top
+    display: flex
+    justify-content: flex-end
+    padding: .75em
+
+.sidenav__close-button
+    width: 3em
+    span
+        font-size: 36px
