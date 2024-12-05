@@ -183,19 +183,61 @@ body
     width: 100vw
     height: 7.5em
     @media (max-width: $desktopS)
+        height: inherit
         flex-direction: column
 
+@mixin footer-subcontainer
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    a
+        text-decoration: none
+        color: inherit
+
 .footer
+    display: flex
+    align-items: center
+
     &__left-section
+        @include footer-subcontainer
+        color: $brownSugar
         background-color: $pinkChampagne
         @media (max-width: $desktopS)
-            height: 60%
+            flex-direction: column
+            padding: 1em
+            font-size: 14px
+            span
+                padding-bottom: 1em
+                text-align: center
+            // height: %
         @media (min-width: $desktopS)
             width: 60%
+            padding: 0 5em
 
     &__right-section
-        background-color: $desertSand
+        @include footer-subcontainer
+        color: $pinkChampagne
+        background-color: $brownSugar
         @media (max-width: $desktopS)
+            font-size: 14px
+            flex-direction: column
+            gap: 1em
+            padding: 1em
             height: 40%
         @media (min-width: $desktopS)
             width: 40%
+            padding: 0 5em
+
+    &__item
+        display: flex
+        justify-content: space-around
+
+        @media (max-width: $desktopS)
+            width: 100%
+            flex-direction: column
+            align-items: center
+            gap: 1em
+
+        @media (min-width: $desktopS)
+            width: 30%
