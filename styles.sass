@@ -241,3 +241,24 @@ body
 
         @media (min-width: $desktopS)
             width: 30%
+
+#hero
+    &__image-container
+        margin: 0
+        position: relative
+    &__image
+        width: 100%
+        height: 80vh
+        object-fit: cover
+    &__image-shadow
+        height: 80vh
+        width: 100%
+        position: absolute
+        top: 0
+        background: linear-gradient(to right, transparent 45%, #FFE9DD)
+    &__image-text-container
+        text-align: right
+        position: absolute
+        right: 10px
+        font-size: 36px
+        z-index: 1
