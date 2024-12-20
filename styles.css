@@ -11,7 +11,7 @@
 }
 body {
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #header {
@@ -19,6 +19,7 @@ body {
   position: sticky;
   top: 0;
   text-align: center;
+  z-index: 999;
 }
 #header img {
   margin-top: -2.5em;
@@ -49,7 +50,7 @@ body {
 .topnav__link-anchor {
   padding: 0.6em 1em;
   text-decoration: none;
-  color: #C77E63;
+  color: #8b1008;
 }
 .topnav__link-anchor:hover {
   cursor: pointer;
@@ -60,7 +61,7 @@ body {
   text-decoration: none !important;
 }
 .topnav__link-anchor--emphasis {
-  background-color: #C77E63;
+  background-color: #8b1008;
   color: #FFE9DD;
   display: flex;
   align-items: center;
@@ -81,7 +82,7 @@ body {
 }
 .topnav__link-container--mobile a {
   text-decoration: none;
-  color: #C77E63;
+  color: #8b1008;
   width: 50%;
 }
 .topnav__link-container--mobile a:hover {
@@ -111,7 +112,7 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
-  color: #C77E63;
+  color: #8b1008;
   z-index: 1001;
 }
 .sidenav__content {
@@ -145,7 +146,7 @@ body {
 .sidenav__link-container {
   display: flex;
   flex-direction: column;
-  color: #C77E63;
+  color: #8b1008;
   gap: 1.5em;
   padding-right: 2em;
 }
@@ -201,7 +202,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #C77E63;
+  color: #8b1008;
   background-color: #FFE9DD;
 }
 .footer__left-section a {
@@ -230,7 +231,7 @@ body {
   align-items: center;
   justify-content: space-between;
   color: #FFE9DD;
-  background-color: #C77E63;
+  background-color: #8b1008;
 }
 .footer__right-section a {
   text-decoration: none;
@@ -269,6 +270,10 @@ body {
   }
 }
 
+#hero {
+  font-family: "IBM Plex Serif", serif;
+  color: #8b1008;
+}
 #hero__image-container {
   margin: 0;
   position: relative;
@@ -283,13 +288,15 @@ body {
   width: 100%;
   position: absolute;
   top: 0;
-  background: linear-gradient(to right, transparent 45%, #FFE9DD);
+  background: linear-gradient(to right, transparent 20%, #FFE9DD 85%);
 }
 #hero__image-text-container {
+  right: 20px;
   text-align: right;
   position: absolute;
-  right: 10px;
-  font-size: 36px;
+  font-size: 60px;
+  top: 25%;
+  padding: 20px;
   z-index: 1;
 }
 

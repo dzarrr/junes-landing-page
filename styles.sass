@@ -6,7 +6,7 @@ $desktop: 1240px
 $desktopHD: 1920px
 
 // COLOR
-$brownSugar: #C77E63
+$brownSugar: #8b1008
 $brownRust: #AC5836
 $pinkChampagne: #FFE9DD
 $desertSand: #E6BCA4
@@ -27,13 +27,14 @@ $zIndexHigherThanOverlay: 1001
 
 body
     margin: 0
-    font-family: "Nunito Sans", sans-serif
+    font-family: "Roboto", sans-serif
 
 #header
     background-color: $pinkChampagne
     position: sticky
     top: 0
     text-align: center
+    z-index: 999
     img
         margin-top: -2.5em
         margin-bottom: -3em
@@ -243,6 +244,8 @@ body
             width: 30%
 
 #hero
+    font-family: "IBM Plex Serif", serif
+    color: $brownSugar
     &__image-container
         margin: 0
         position: relative
@@ -255,10 +258,12 @@ body
         width: 100%
         position: absolute
         top: 0
-        background: linear-gradient(to right, transparent 45%, #FFE9DD)
+        background: linear-gradient(to right, transparent 20%, #FFE9DD 85%)
     &__image-text-container
+        right: 20px
         text-align: right
         position: absolute
-        right: 10px
-        font-size: 36px
+        font-size: 60px
+        top: 25%
+        padding: 20px
         z-index: 1
